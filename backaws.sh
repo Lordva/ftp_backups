@@ -1,8 +1,8 @@
-##################################################
-# Script de Backup FTP by Lordva for Gardenmc.fr #
-##################################################
+########################################################
+# Script de Backup AWS S3 by Lordva for RisingBlade.fr #
+########################################################
 
-AWS_HOST="s3://risingbladebackupbucket"
+AWS_HOST=""
 
 PATH_SAVE="/srv/mc"
 
@@ -60,7 +60,7 @@ fi
 # Préparation des paramètres de compression
 FILENAME=${DATE_JOUR}"-server.tar.gz"
 
-#arret des servers dans /srv
+#arret des serveurs dans /srv
 systemctl stop "mcserver"
 RESULT=$?
 if [ "$RESULT" != "0" ]; then
